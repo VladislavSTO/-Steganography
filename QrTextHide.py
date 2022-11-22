@@ -1,6 +1,6 @@
-from main import *
-from main import shifr
-from main import findShifr
+from main1 import *
+from main1 import shifr
+from main1 import findShifr
 
 from tkinter import *
 from tkinter import ttk
@@ -17,6 +17,7 @@ class QrTextHide(Tk):
         default_font.configure(size=12)
         self.option_add("*Font", default_font)
         self.title("Здесь могла быть ваша реклама")
+        self.iconphoto(False, PhotoImage(file='i.png'))
 
         self.img_file = StringVar()
         self.download_path = StringVar()
