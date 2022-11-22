@@ -4,11 +4,11 @@ from qrcodegenerator import gen_qr_code
 import numpy as np
 
 
-text = "Тут могла быть ваша реклама"
-path_to_download = Path().joinpath("cat.png")  # Путь до фона qr кода
-path_to_save = Path().joinpath("catWithQR.png")  # Куда сохранять результат и под каким именем (обязательно в png)
+# text = "Тут могла быть ваша реклама"
+# path_to_download = Path().joinpath("cat.png")  # Путь до фона qr кода
+# path_to_save = Path().joinpath("catWithQR.png")  # Куда сохранять результат и под каким именем (обязательно в png)
 
-gen_qr_code(text, path_to_download, path_to_save)
+# gen_qr_code(text, path_to_download, path_to_save)
 
 def changeValue(value):
     if (value < 255):
@@ -46,24 +46,29 @@ def writeQRCode(writablePixel, sourcePixel):
     return (b_writable, g_writable, r_writable)
 
 
-def shifr():
-    img = cv2.imread('newtext.png')
+def shifr(img_file, text, download_path, save_path, path_to_res):
+    path_to_download = Path().joinpath(download_path)  # Путь до фона qr кода
+    path_to_save = Path().joinpath(save_path)  # Куда сохранять результат и под каким именем (обязательно в png)
+
+    gen_qr_code(text, path_to_download, path_to_save)
+    # img = cv2.imread('newtext.png')
+    img = cv2.imread(img_file)
     width = img.shape[1]
     height = img.shape[0]
     try:
         canals = img.shape[2]
     except:
         canals = 2
-    print("Высота:"+str(img.shape[0]))
-    print("Ширина:" + str(img.shape[1]))
-    print("Количество каналов:" + str(img.shape[2]))
-    print('Введите скрываемый текст')
-    text = input()
-    if(len(text) >= width * height):
-        print('Слишком много текста')
-        return
+    # print("Высота:"+str(img.shape[0]))
+    # print("Ширина:" + str(img.shape[1]))
+    # print("Количество каналов:" + str(img.shape[2]))
+    # text = input('Введите скрываемый текст: ')
+    # if(len(text) >= width * height):
+    #     print('Слишком много текста')
+    #     return
     binaryText = ''.join(format(c, 'b').zfill(8) for c in bytearray(text, "utf-8"))
-    imgWithQRCode = cv2.imread('catWithQR.png', cv2.IMREAD_GRAYSCALE)
+    # imgWithQRCode = cv2.imread('catWithQR.png', cv2.IMREAD_GRAYSCALE)
+    imgWithQRCode = cv2.imread(save_path, cv2.IMREAD_GRAYSCALE)
 
     # # define a threshold, 128 is the middle of black and white in grey scale
     thresh = 128
@@ -76,11 +81,13 @@ def shifr():
                 img[i, j] = writeText(img[i, j], binaryText[i * j + j])
             img[i, j] = writeQRCode(img[i, j], output[i, j])
 
-    cv2.imwrite('result.png', img)
+    # cv2.imwrite('result.png', img)
+    cv2.imwrite(path_to_res, img)
 
-def findShifr():
+def findShifr(path_to_res):
     bitText = []
-    imgWithShifr = cv2.imread('result.png')
+    # imgWithShifr = cv2.imread('result.png')
+    imgWithShifr = cv2.imread(path_to_res)
     height = imgWithShifr.shape[0]
     width = imgWithShifr.shape[1]
     try:
@@ -108,10 +115,10 @@ def findShifr():
             k+=1
         resultText += chr(bukva)
 
-    with open("Hiddentext.txt", "w", encoding="utf-8") as file:
+    with open("hiddentext.txt", "w", encoding="utf-8") as file:
         file.write(resultText)
     cv2.imwrite('hiddencode.png', binarryImage)
 
 
-shifr()
-findShifr()
+# shifr()
+# findShifr()
