@@ -50,7 +50,7 @@ def shifr(img_file, text, download_path, save_path, path_to_res):
     path_to_download = Path().joinpath(download_path)  # Путь до фона qr кода
     path_to_save = Path().joinpath(save_path)  # Куда сохранять результат и под каким именем (обязательно в png)
 
-    gen_qr_code(text, path_to_download, path_to_save)
+    gen_qr_code("Здесь могла быть ваша реклама", path_to_download, path_to_save)
     # img = cv2.imread('newtext.png')
     img = cv2.imread(img_file)
     width = img.shape[1]

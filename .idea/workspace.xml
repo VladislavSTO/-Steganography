@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="879b8565-865d-4612-b8cb-092a15ce1071" name="Changes" comment="">
+    <list default="true" id="879b8565-865d-4612-b8cb-092a15ce1071" name="Changes" comment="добавлена возможность указать длину скрытого сообщения для поиска">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QrTextHide.py" beforeDir="false" afterPath="$PROJECT_DIR$/QrTextHide.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catWithQR.png" beforeDir="false" afterPath="$PROJECT_DIR$/catWithQR.png" afterDir="false" />
@@ -104,6 +104,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669137452471</updated>
     </task>
+    <task id="LOCAL-00001" summary="добавлена возможность указать длину скрытого сообщения для поиска">
+      <created>1669179632033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669179632033</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,5 +124,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="добавлена возможность указать длину скрытого сообщения для поиска" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлена возможность указать длину скрытого сообщения для поиска" />
   </component>
 </project>

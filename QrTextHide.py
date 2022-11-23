@@ -65,12 +65,12 @@ class QrTextHide(Tk):
         button4 = Button(self.tab1, text="Открыть", command=lambda: self.file_get('path_to_res'), bg="#00BFFF")
         button4.grid(sticky="EW", row=4, column=2)
 
-        Label(self.tab1, text="Что будем прятать? ").grid(sticky="W", row=1, column=0)
+        Label(self.tab1, text="Что будем прятать? ").grid(sticky="W", row=6, column=0)
         self.text = Text(self.tab1, height=10, borderwidth=5)
-        self.text.grid(sticky="EW", row=5, columnspan=3)
+        self.text.grid(sticky="EW", row=7, columnspan=3)
 
         buttonHide = Button(self.tab1, text="Спрятать", command=self.shifr, bg="#00BFFF")
-        buttonHide.grid(sticky="EW", row=6, columnspan=3)
+        buttonHide.grid(sticky="EW", row=8, columnspan=3)
 
     def define_hide_tab(self):
         self.tab2 = ttk.Frame(self.tabControl)
