@@ -84,7 +84,7 @@ def shifr(img_file, text, download_path, save_path, path_to_res):
     # cv2.imwrite('result.png', img)
     cv2.imwrite(path_to_res, img)
 
-def findShifr(path_to_res):
+def findShifr(path_to_res, length = -1):
     bitText = []
     # imgWithShifr = cv2.imread('result.png')
     imgWithShifr = cv2.imread(path_to_res)
@@ -108,7 +108,11 @@ def findShifr(path_to_res):
                 binarryImage[i, j] = 255
     resultText =''
     k = 0
-    while k < len(bitText):
+    if length == -1:
+        length = len(bitText)
+    else:
+        length = 8 * length
+    while k < length:
         bukva = 0
         for j in range(8):
             bukva += bitText[k] * (2**(7 - j))

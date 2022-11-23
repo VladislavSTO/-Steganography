@@ -23,6 +23,8 @@ class QrTextHide(Tk):
         self.download_path = StringVar()
         self.save_path = StringVar()
         self.path_to_res = StringVar()
+        self.length = IntVar()
+        self.length.set(-1)
 
         self.img_file.set('newtext.png')
         self.download_path.set('cat.png')
@@ -74,13 +76,15 @@ class QrTextHide(Tk):
         self.tab2 = ttk.Frame(self.tabControl)
         self.tabControl.add(self.tab2, text='Найти шифр')
 
-        Label(self.tab2, text="Где результат?").grid(sticky="W", row=0, column=0, padx=(100, 0), pady=(100, 0))
-        Entry(self.tab2, textvariable=self.path_to_res).grid(sticky="W", row=0, column=1, padx=(100, 0), pady=(100, 0))
+        Label(self.tab2, text="Где результат?").grid(sticky="W", row=0, column=0, padx=(50, 0), pady=(80, 0))
+        Entry(self.tab2, textvariable=self.path_to_res).grid(sticky="W", row=0, column=1, padx=(50, 0), pady=(80, 0))
+        Label(self.tab2, text="Примерная длина сообщения: ").grid(sticky="W", row=1, column=0, padx=(50, 0), pady=(80, 0))
+        Entry(self.tab2, textvariable=self.length).grid(sticky="W", row=1, column=1, padx=(50, 0), pady=(80, 0))
         button1 = Button(self.tab2, text="Открыть", command=lambda: self.file_get('path_to_res'), bg="#00BFFF")
-        button1.grid(sticky="EW", row=0, column=2, padx=(100, 0), pady=(100, 0))
+        button1.grid(sticky="EW", row=0, column=2, padx=(50, 0), pady=(80, 0))
 
         buttonHide = Button(self.tab2, text="Понять и простить", command=self.find_shifr, bg="#00BFFF")
-        buttonHide.grid(sticky="EW", row=1, columnspan=3, padx=(100, 0), pady=(100, 0))
+        buttonHide.grid(sticky="EW", row=2, columnspan=3, padx=(100, 0), pady=(100, 0))
 
     def shifr(self):
         i_f = self.img_file.get()
@@ -103,6 +107,7 @@ class QrTextHide(Tk):
 
     def find_shifr(self):
         f = self.path_to_res.get()
+        l = self.length.get()
         if f == '':
             messagebox.showinfo(title="Ошибка", message="Проверьте пути")
         elif f[-4:] != '.png':
@@ -110,7 +115,7 @@ class QrTextHide(Tk):
         elif not os.path.exists(f):
             messagebox.showinfo(title="Ошибка", message="Проверьте есть ли такие файлы")
         else:
-            findShifr(f)
+            findShifr(f, l)
             messagebox.showinfo(title="Выходной файл", message="Данные записаны в hiddencode.txt и в hiddentext.txt")
 
     def file_get(self, file):

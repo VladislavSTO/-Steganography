@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879b8565-865d-4612-b8cb-092a15ce1071" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/-Steganography.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QrTextHide.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/steganography.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QrTextHide.py" beforeDir="false" afterPath="$PROJECT_DIR$/QrTextHide.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catWithQR.png" beforeDir="false" afterPath="$PROJECT_DIR$/catWithQR.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hiddencode.png" beforeDir="false" afterPath="$PROJECT_DIR$/hiddencode.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hiddentext.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hiddentext.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main1.py" beforeDir="false" afterPath="$PROJECT_DIR$/main1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.png" beforeDir="false" afterPath="$PROJECT_DIR$/result.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -36,14 +39,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/HP/Desktop/New folder/Предметы 4 курс/Криптография/lab6/-Steganography/QrTextHide.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Desktop/New folder/Предметы 4 курс/Криптография/lab6/-Steganography/QrTextHide.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.QrTextHide">
     <configuration name="QrTextHide" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="-Steganography" />
